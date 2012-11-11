@@ -2,6 +2,7 @@ import datetime
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 
+
 class InviteRequest(models.Model):
     email = models.EmailField(_('Email address'), unique=True)
     created = models.DateTimeField(_('Created'), default=datetime.datetime.now)
