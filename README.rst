@@ -38,6 +38,7 @@ You will also need to create two templates.  The first is
     <h3>Enter your email address and we'll send you an invite soon</h3>
     <form action="{% url privatebeta_invite %}" method="post">
     {{ form }}
+    {% csrf_token %}
     <input type="submit" value="Submit" />
     </form>
     {% endblock %}
@@ -132,7 +133,7 @@ release, then migrate to 0.4.0:
 Compatibility
 =============
 
-This application is known to work with Django 1.0.X and Django 1.1.X.
+This application is known to work with Django 1.0.X, Django 1.1.X & Django 1.2.X.
 
 .. _private beta project: http://github.com/pinax/pinax/tree/master/pinax/projects/private_beta_project/
 .. _urlconf: http://github.com/pinax/pinax/blob/master/pinax/projects/private_beta_project/urls.py
